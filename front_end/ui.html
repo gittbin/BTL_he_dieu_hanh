@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ui.css">
+</head>
+<body>
+    <div class="main">
+<div class="container">
+        <!-- <div class="cover"></div> -->
+        <div class="element">
+            <div class="icon">
+            <h2 style="color: aliceblue;">Tương tác với phần cứng chuyên dụng</h2>
+            <div class="o">
+            <lord-icon
+                src="https://cdn.lordicon.com/xcrjfuzb.json"
+                trigger="loop"
+                colors="primary:#ffffff,secondary:#ffffff"
+                style="width:30px;height:30px">
+            </lord-icon>     </div>
+        </div>
+            <div class="selection">
+                <div class="selection_item cpu">
+                    <h2>Đọc dữ liệu CPU</h2>
+                </div>
+                <div class="selection_item ram">
+                    <h2>Đọc dữ liệu RAM</h2>
+                </div>
+                <div class="selection_item disk">
+                    <h2>Đọc dữ liệu DIST</h2>
+                </div>
+                <div class="selection_item mouse">
+                    <h2>di chuyển chuột</h2>
+                </div>
+                
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="element">
+            <div class="icon">
+            <h2 style="color: aliceblue;">Giao tiếp với tập tin nâng cao</h2>
+            <div class="o">
+            <lord-icon
+                src="https://cdn.lordicon.com/xcrjfuzb.json"
+                trigger="loop"
+                colors="primary:#ffffff,secondary:#ffffff"
+                style="width:30px;height:30px">
+            </lord-icon>     </div>
+        </div>
+            <div class="selection">
+                <div class="selection_item copy">
+                    <h2>Sao chép </h2>
+                </div>
+                <div class="selection_item deletes">
+                    <h2>Xóa</h2>
+                </div>
+                <div class="selection_item change">
+                    <h2>thay đổi type</h2>
+                </div>
+               
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="element">
+            <div class="icon">
+            <h2 style="color: aliceblue;">Thao tác quyền truy cập</h2>
+            <div class="o">
+            <lord-icon
+                src="https://cdn.lordicon.com/xcrjfuzb.json"
+                trigger="loop"
+                colors="primary:#ffffff,secondary:#ffffff"
+                style="width:30px;height:30px">
+            </lord-icon>     </div>
+        </div>
+            <div class="selection">
+                <div class="selection_item r_perms">
+                    <h2>đọc quyền</h2>
+                </div>
+                <div class="selection_item c_perms">
+                    <h2>thay đổi quyền</h2>
+                </div>
+                <div class="selection_item r_att">
+                    <h2>đọc thuộc tính</h2>
+                </div>
+                <div class="selection_item c_att">
+                    <h2>thay đổi thuộc tính</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+<div class="detail">
+<div class="loading"></div>
+<div class="infor" style="color: white;">
+    <div class="for_device">
+
+    </div>
+    <div class="for_file">
+        <div class="for for_copy">
+            <div class="button">
+        <label class="custom-file-upload">
+            đường dẫn nguồn : 
+<lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+        </label>
+    <input id="input" type="text" class="common"/>
+    <h4 class="confirm"></h4>
+</div>  
+        <div class="button">
+    <label class="custom-file-upload">
+        đường dẫn đích :
+        <lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+    </label>
+<input id="output" type="text" class="common"/>
+<h4 class="confirm"></h4>
+</div>
+<div class="button type">
+    <label class="custom-file-upload">
+        kiểu file ('all' for all)
+        <lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+    </label>
+<input id="output3" type="text" class="common"/>
+<h4 class="confirm"></h4>
+</div>
+<div class="button commit">
+   
+      <h3>xác nhận</h3>  
+</div>
+<div class="announc">
+</div>
+        </div>
+        <div class="for for_delete">
+            <div class="button">
+                <label class="custom-file-upload">
+                    đường dẫn : 
+        <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+                </label>
+            <input id="input2" type="text" class="common"/>
+            <h4 class="confirm"></h4>
+        </div>  
+                <div class="button">
+            <label class="custom-file-upload">
+                kiểu file ('all' for all):
+                <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+            </label>
+        <input id="output2" type="text" class="common"/>
+        <h4 class="confirm"></h4>
+        </div>
+        <div class="button commit">
+           
+              <h3>xác nhận</h3>  
+        </div>
+        <div class="announc">
+        </div>
+        </div>
+        <div class="for for_mouse">
+            <div class="button">
+                <label class="custom-file-upload">
+                    tọa độ x : 
+        <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+                </label>
+            <input id="input_mouse" type="text" class="common"/>
+            <h4 class="confirm"></h4>
+        </div>  
+                <div class="button">
+            <label class="custom-file-upload">
+                tọa độ y :
+                <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+            </label>
+        <input id="output_mouse" type="text" class="common"/>
+        <h4 class="confirm"></h4>
+        </div>
+        <div class="button commit">
+           
+            <h3>xác nhận</h3>  
+      </div>
+        <div class="announc">
+        </div>
+        </div>
+        <div class="for for_change">
+            <div class="button">
+        <label class="custom-file-upload">
+            đường dẫn nguồn : 
+<lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+        </label>
+    <input id="input_change" type="text" class="common"/>
+    <h4 class="confirm"></h4>
+</div>  
+        <div class="button">
+    <label class="custom-file-upload">
+        tiền tố cũ :
+        <lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+    </label>
+<input id="output_change" type="text" class="common"/>
+<h4 class="confirm"></h4>
+</div>
+<div class="button type">
+    <label class="custom-file-upload">
+        tiền tố mới :
+        <lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+    </label>
+<input id="output2_change" type="text" class="common"/>
+<h4 class="confirm"></h4>
+</div>
+<div class="button commit">
+   
+      <h3>xác nhận</h3>  
+</div>
+<div class="announc">
+</div>
+        </div>  
+        <div class="for for_r_perms">
+            <div class="button">
+        <label class="custom-file-upload">
+            đường dẫn nguồn : 
+<lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+        </label>
+    <input id="input_r_perms" type="text" class="common"/>
+    <h4 class="confirm"></h4>
+</div>  
+
+<div class="button commit">
+      <h3>xác nhận</h3>  
+</div>
+<div class="announc">
+</div>
+        </div>
+        <div class="for for_c_perms">
+            <div class="button">
+                <label class="custom-file-upload">
+                    đường dẫn nguồn :  
+        <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+                </label>
+            <input id="input_c_perms" type="text" class="common"/>
+            <h4 class="confirm"></h4>
+        </div>  
+                <div class="button">
+            <label class="custom-file-upload">
+                nhập quyền truy cập :
+                <lord-icon
+            src="https://cdn.lordicon.com/smwmetfi.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:40px;height:40px">
+        </lord-icon>
+            </label>
+        <input id="output_c_perms" type="text" class="common"/>
+        <h5>Everyone:R - Chỉ đọc.<br>
+            Everyone:W - Chỉ ghi.<br>
+            Everyone:RX - Đọc và thực thi.<br>
+            UserName:F - Toàn quyền cho một<br> người dùng cụ thể.<br>
+            GroupName:RX - Đọc và thực thi cho<br> một nhóm cụ thể.<br>
+            BUILTIN\Administrators - Quản trị viên<br>
+            NT AUTHORITY\SYSTEM - Tài <br> khoản hệ thống<br>
+            NT AUTHORITY\Authenticated Users -<br>Người dùng đã xác thực có<br> quyền chỉnh sửa<br>
+            ..............        
+        </h5>
+        <h4 class="confirm"></h4>
+        </div>
+        <div class="button commit">
+           
+            <h3>xác nhận</h3>  
+      </div>
+        <div class="announc">
+        </div>
+        </div>
+        <div class="for for_r_att">
+            <div class="button">
+        <label class="custom-file-upload">
+            đường dẫn nguồn : 
+<lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+        </label>
+    <input id="input_r_att" type="text" class="common"/>
+    <h4 class="confirm"></h4>
+</div>  
+
+<div class="button commit">
+      <h3>xác nhận</h3>  
+</div>
+<div class="announc">
+</div>
+        </div>
+        <div class="for for_c_att">
+            <div class="button">
+        <label class="custom-file-upload">
+            đường dẫn nguồn : 
+<lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+        </label>
+    <input id="input_c_att" type="text" class="common"/>
+    <h4 class="confirm"></h4>
+</div>  
+<div class="button">
+    <label class="custom-file-upload">
+        nhập thuộc tính mới :
+        <lord-icon
+    src="https://cdn.lordicon.com/smwmetfi.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:40px;height:40px">
+</lord-icon>
+    </label>
+<input id="output_c_att" type="text" class="common"/>
+<h5>Read-only (R): Chỉ đọc. Tệp hoặc thư mục<br> không thể bị thay đổi hoặc xóa.<br>
+    Hidden (H): Ẩn. Tệp hoặc thư mục không<br> được hiển thị trong thư mục thông thường.<br>
+    System (S): Hệ thống. Tệp hoặc thư mục<br> được sử dụng bởi hệ điều hành.<br>
+    Archive (A): Lưu trữ. Thường được sử<br> dụng để đánh dấu các tệp cần được<br> sao lưu hoặc lưu trữ.</h5>
+<h4 class="confirm"></h4>
+</div>
+<div class="button commit">
+      <h3>xác nhận</h3>  
+</div>
+<div class="announc">
+</div>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+</div>
+</div>
+    
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+<script src="./ui.js"></script>
+
+</body>
+</html>

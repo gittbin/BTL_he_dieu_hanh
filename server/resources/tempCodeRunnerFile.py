@@ -1,0 +1,1 @@
+set_file_attributes(path, '+R +H')
