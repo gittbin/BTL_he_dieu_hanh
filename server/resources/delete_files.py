@@ -1,6 +1,9 @@
 import os
 
 def delete_files_by_extension(directory, extension):
+    if not os.path.exists(directory):
+        print(f"Directory {directory} does not exist.")
+        return 0
     if extension=='all':
         print(1)
         try:
@@ -9,7 +12,7 @@ def delete_files_by_extension(directory, extension):
                     file_path = os.path.join(root, file)
                     os.remove(file_path)
                     print(f"Đã xóa {file_path}")
-                return 1
+            return 1
         except Exception as e:
             print(f"Lỗi khi xóa tệp tin: {e}")
             return 0
@@ -22,7 +25,7 @@ def delete_files_by_extension(directory, extension):
                         file_path = os.path.join(root, file)
                         os.remove(file_path)
                         print(f"Đã xóa {file_path}")
-                return 1
+            return 1
         except Exception as e:
             print(f"Lỗi khi xóa tệp tin: {e}")
             return 0

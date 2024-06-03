@@ -1,2 +1,0 @@
-
-    return jsonify({'result':data} )

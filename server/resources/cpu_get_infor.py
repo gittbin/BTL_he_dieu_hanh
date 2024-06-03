@@ -3,12 +3,13 @@ import platform
 
 def get_cpu_info():
     if platform.system() == "Windows":
-        # Sử dụng lệnh gọi hệ thống 'wmic' để lấy thông tin về CPU
         try:
             result = os.popen("wmic cpu get caption, maxclockspeed, numberofcores").read()
+            print(result)
             lines = result.split("\n")
-        
+            print(lines)
             for line in lines[1:]:
+                print(line)
                 if line.strip():
                     parts = line.split()
                     cpu_name = parts[0]
@@ -32,3 +33,4 @@ def get_cpu_info():
         print("Hệ thống không phải là Windows. Không thể lấy thông tin CPU.")
 
 
+get_cpu_info()

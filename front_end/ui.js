@@ -676,7 +676,7 @@ for_c_att.querySelector('.commit').onclick=()=>{
     })
     if(check){
       var params = new URLSearchParams();
-      params.append('x',input_r_att.value)
+      params.append('x',input_c_att.value)
       params.append('y',output_c_att.value);
       console.log('http://127.0.0.1:8000/c_att?'+params.toString())
       change_loading(1)

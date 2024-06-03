@@ -1,11 +1,17 @@
 import subprocess
-
+import os
 def set_file_attributes(path, attributes):
     """
     Set file or folder attributes using the 'attrib' command.
     :param path: Path to the file or folder
     :param attributes: String of attributes to set (e.g., '+R +H' to set Read-only and Hidden)
     """
+    print(path)
+    if not os.path.exists(path):
+        print(f"Directory {path} does not exist.")
+        return {"announc":0,
+                "infor":f"{path} doesn't exist"       
+        }
     try:
         command = f'attrib {attributes} "{path}"'
         subprocess.check_call(command, shell=True)
@@ -24,6 +30,11 @@ def get_file_attributes(path):
     Get the attributes of a file or folder using the 'attrib' command.
     :param path: Path to the file or folder
     """
+    if not os.path.exists(path):
+        print(f"Directory {path} does not exist.")
+        return {"announc":0,
+                "infor":f"{path} doesn't exist"       
+        }
     try:
         result = subprocess.check_output(['attrib', path]).decode()
         print(f"Attributes for {path}:\n{result}")
