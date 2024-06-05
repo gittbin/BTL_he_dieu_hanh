@@ -1,213 +1,241 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.6s ease-in;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.6s ease-in;
 
-        font-family: Arial, Helvetica, sans-serif;
-    
+  font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    width: 100%;
+body {
+  width: 100%;
 
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container{   
-   position: relative;
-    min-height: 800px;
-    width: 30%;
-    /* min-width: 1200px; */
-    /* display: flex;
+.container {
+  position: relative;
+  min-height: 800px;
+  width: 30%;
+  /* min-width: 1200px; */
+  /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly; */
-    border-right: 3px solid white;
-    background-color: black;
+  border-right: 3px solid white;
+  background-color: black;
 }
-.element{padding: 0px 40px;
-    cursor: pointer;
-     min-height: 90px; 
-     width: 100%;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.element {
+  padding: 0px 40px;
+  cursor: pointer;
+  min-height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.cover{border: 10px solid rgb(255, 255, 255);
-    position: absolute;
+.cover {
+  border: 10px solid rgb(255, 255, 255);
+  position: absolute;
 
-    height: 100px;
-    width: 100px;
-    background-color: rgb(29, 125, 49);
-   border-radius: 50%;
-   display: none;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(29, 125, 49);
+  border-radius: 50%;
+  display: none;
 }
-h2{display: block;}
+h2 {
+  display: block;
+}
 
-.icon{width: 100%;
-height: 44px;
-display: flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom: 40px;
-margin-top: 40px;
+.icon {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
-.main{
-    width: 100%;
-    height: 100%;
-    display: flex;
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
-.details{
-    width: 20px;
+.details {
+  width: 20px;
 }
-.selection_item{
-    display: flex;
-    justify-content: center; /* căn giữa theo chiều rộng */
-    align-items: center;
-    min-height: 80px;
-    color:greenyellow;
-    width: 100%;
-    margin-bottom: 25px;
-    border-radius: 10px;
+.selection_item {
+  display: flex;
+  justify-content: center; /* căn giữa theo chiều rộng */
+  align-items: center;
+  min-height: 80px;
+  color: greenyellow;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 10px;
 }
-.selection_item:hover{
-    transition: all 0.1s linear;
-    border: 2px solid transparent;
-    border-color: greenyellow;
-    
+.selection_item:hover {
+  transition: all 0.1s linear;
+  border: 2px solid transparent;
+  border-color: greenyellow;
 }
-.selection{
-    width: 100%;
-    height: 0px;
-    overflow: hidden;
-  
+.selection {
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
 }
-.line{
-    width: 100%;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
 }
-.detail{
-    background-color: black;
-    width: 100%;
-    position: relative;
+.detail {
+  background-color: black;
+  width: 100%;
+  position: relative;
 }
-.loading{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+.loading {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 
-    border-top: 4px solid rgb(255, 255, 255) ;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    animation: spin 0.5s linear infinite ;
+  border-top: 4px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 0.5s linear infinite;
 }
-@keyframes spin{
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-.infor{position: relative;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    height: 100%;
-   flex-direction: column;
+.infor {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
 }
 input[type="file"] {
-    display: none;
-  }
-  
-  .custom-file-upload {
-    display: block;
-margin-bottom: 10px;
-  }
- .button{
-font-size: 30px;
-border-radius: 15px;
+  display: none;
+}
 
+.custom-file-upload {
+  display: block;
+  margin-bottom: 10px;
 }
- .start{
-
+.button {
+  font-size: 30px;
+  border-radius: 15px;
 }
-.destination{
-
+.start {
 }
-.confirm{
-    color: aliceblue;
-    margin-top: 10px;
-    transition: none;
+.destination {
 }
-.commit{   height: 100px;
-    width: 300px;
-border: 4px solid white;
-border-radius: 10px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    cursor: pointer;
-    transform: translate(0%,0%);
-    transition: 0.01s all linear;
-
+.confirm {
+  color: aliceblue;
+  margin-top: 10px;
+  transition: none;
 }
-.commit:hover{
- 
-    color: black;
-    background-color: white;
-    border-color: black;
+.commit {
+  height: 100px;
+  width: 300px;
+  border: 4px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translate(0%, 0%);
+  transition: 0.01s all linear;
+}
+.commit:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 input[type="text"] {
-    display: block;
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    width: 500px;
-    color: black;
-    transform: none;
-    font-size:large;
-  }
-  .announc{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(0, 0, 0,0.7);
+  display: block;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: 500px;
+  color: black;
+  transform: none;
+  font-size: large;
+}
+.announc {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
-  .for_file{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.for_file {
+  display: none;
+  width: 100%;
+  height: 800px;
+}
+.for {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  display: none;
+}
 
-    width: 100%;
-    height: 800px;
-  }
-  .for{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    height: 100%;
-   flex-direction: column;
-   display: none;
-  }
-
-  .for_device{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    display: none;
-  }
+.for_device {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+.for_process {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: none;
+}
+.block {
+  word-wrap: break-word;
+  height: 200px;
+  width: 25%;
+  border: 1px rgb(255, 255, 255) solid;
+  /* background-color: greenyellow; */
+  padding: 10px;
+  background-clip: content-box;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.block:hover {
+  background-color: rgb(37, 164, 31, 0.8);
+}
+.text_in_block {
+  margin-top: 10%;
+}

@@ -1,1 +1,2 @@
-set_file_attributes(path, '+R +H')
+
+        #     a.append(proc.info['pid']) 

@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from resources import cpu_get_infor,Ram,disk_infor,copy_files,delete_files,mouse as mouses,change_files,perms,att_files
+from resources import cpu_get_infor,Ram,disk_infor,copy_files,delete_files,mouse as mouses,change_files,perms,att_files,process as pr
 app = Flask(__name__)
 def add_cors_headers(response):
     response.headers['Access-Control-Allow-Origin'] = '*'
@@ -68,6 +68,15 @@ def c_att():
     x=request.args.get('x')
     y=request.args.get('y')
     data=att_files.set_file_attributes(x,y)
+    return jsonify({'result':data} )
+@app.route('/process', methods=['GET'])
+def process():
+    data=pr.get_pid_by_name()
+    return jsonify({'result':data} )
+@app.route('/interrupt', methods=['GET'])
+def interrupt():
+    x=request.args.get('x')
+    data=pr.terminate_process(x)
     return jsonify({'result':data} )
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
